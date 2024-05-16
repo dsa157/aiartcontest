@@ -19,11 +19,15 @@ app.use(express.static(path.join(__dirname, '../public')));
 // Routes
 app.get('/gallery', async (req, res) => {
   try {
-    const query = { user: "dsa157" };
-    //const images = await Image.find(query);
-    const images = await Image.find({});
+    const query = req.query.q || '';
+    const regex = new RegExp(query, 'i');
+    const images = await Image.find({
+      $or: [
+        { hashtags: regex },
+        { user: regex }
+      ]
+    });
     res.render('gallery', { images });
-
   } catch (err) {
     res.status(500).send(err);
   }
@@ -33,5 +37,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-

@@ -1,4 +1,3 @@
-<!-- views/gallery.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,20 +11,28 @@
     <main>
         <section>
             <h2>Gallery</h2>
-            <input type="text" id="search" placeholder="Search by hashtag or username">
-            <div class="image-grid">
-                
+            <input type="text" id="search" placeholder="Search by hashtag or username" oninput="filterGallery()">
+            <div class="image-grid" id="image-grid">
                 <% images.forEach(function(image) { %>
                     <div onclick="viewImage('<%= image.url %>', '<%= image.title %>', '<%= image.hashtags.join(' ') %>', '<%= image.tools.join(', ') %>', '<%= image.user %>', '/profile-view/<%= image.user %>')">
                         <img src="<%= image.url %>" alt="<%= image.title %>">
                     </div>
                 <% }); %>
-                
             </div>
         </section>
     </main>
     <div id="footer"></div>
     <script src="/js/loadPartials.js"></script>
     <script src="/js/gallery.js"></script>
+    <script>
+        async function filterGallery() {
+            const query = document.getElementById('search').value;
+            const response = await fetch(`/gallery?q=${encodeURIComponent(query)}`);
+            const html = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            document.getElementById('image-grid').innerHTML = doc.getElementById('image-grid').innerHTML;
+        }
+    </script>
 </body>
 </html>
