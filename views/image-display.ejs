@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= image.title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <section>
+            <h2><%= image.title %></h2>
+            <img src="<%= image.url %>" alt="<%= image.title %>">
+            <p>Hashtags: <%= image.hashtags.join(', ') %></p>
+            <p>Tools: <%= image.tools.join(', ') %></p>
+            <% if (user) { %>
+                <p>By: <a href="/profile/<%= user.username %>"><%= user.username %></a></p>
+            <% } else { %>
+                <p>By: ???</p>
+            <% } %>
+            <p>Uploaded on: <%= new Date(image.createdAt).toLocaleDateString() %></p>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="/js/loadPartials.js"></script>
+</body>
+</html>

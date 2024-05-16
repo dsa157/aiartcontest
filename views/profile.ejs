@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= user.username %>'s Profile</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <section>
+            <h2><%= user.username %>'s Profile</h2>
+            <img src="<%= user.avatar %>" alt="<%= user.username %>'s avatar" class="profile-avatar">
+            <p><%= user.summary %></p>
+            <div class="social-media">
+                <a href="https://instagram.com/<%= user.socialMedia.instagram %>" target="_blank">Instagram</a>
+                <a href="https://twitter.com/<%= user.socialMedia.twitter %>" target="_blank">Twitter</a>
+            </div>
+            <h3>Uploaded Images</h3>
+            <div class="image-grid">
+                <% images.forEach(function(image) { %>
+                    <div onclick="viewImage('<%= image._id %>')">
+                        <img src="<%= image.url %>" alt="<%= image.title %>">
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="/js/loadPartials.js"></script>
+    <script>
+        function viewImage(id) {
+            window.location.href = `/image/${id}`;
+        }
+    </script>
+</body>
+</html>
