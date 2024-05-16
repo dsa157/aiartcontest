@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Artwork</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <section>
+            <h2>Submit Your Artwork</h2>
+            <form id="submissionForm" action="/submit" method="POST" enctype="multipart/form-data">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+                <label for="hashtags">Hashtags:</label>
+                <input type="text" id="hashtags" name="hashtags">
+                <label for="tools">Tools Used:</label>
+                <input type="text" id="tools" name="tools">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="js/loadPartials.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

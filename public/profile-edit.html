@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <section>
+            <div>
+                <img src="images/placeholder1.png" alt="User Avatar" class="profile-avatar">
+                <button>Edit Avatar</button>
+            </div>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" value="User123">
+            </div>
+            <div>
+                <label for="summary">Summary:</label>
+                <textarea id="summary">This is a short bio.</textarea>
+            </div>
+            <div>
+                <label for="social-media">Social Media:</label>
+                <input type="text" id="social-media" placeholder="e.g., Instagram: @user123">
+            </div>
+            <button>Save Profile</button>
+            <button onclick="location.href='profile-view.html'">Cancel</button>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="js/loadPartials.js"></script>
+</body>
+</html>
