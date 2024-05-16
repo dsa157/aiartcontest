@@ -12,12 +12,16 @@
         <section>
             <h2><%= image.title %></h2>
             <img src="<%= image.url %>" alt="<%= image.title %>">
-            <p>Hashtags: <%= image.hashtags.join(', ') %></p>
+            <p>Hashtags: 
+                <% image.hashtags.forEach(function(tag) { %>
+                    <a href="/gallery?q=<%= encodeURIComponent(tag) %>"><%= tag %></a>
+                <% }); %>
+            </p>
             <p>Tools: <%= image.tools.join(', ') %></p>
             <% if (user) { %>
                 <p>By: <a href="/profile/<%= user.username %>"><%= user.username %></a></p>
             <% } else { %>
-                <p>By: ???</p>
+                <p>By: Unknown or Invalid User</p>
             <% } %>
             <p>Uploaded on: <%= new Date(image.createdAt).toLocaleDateString() %></p>
         </section>
