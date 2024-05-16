@@ -1,15 +1,17 @@
 {
-  "name": "my-art-contest",
+  "name": "aiartcontest",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server/app.js"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "eps": "^0.1.0",
     "express": "^4.19.2",
     "mongoose": "^5.13.22",
-    "multer": "^1.4.4"
+    "multer": "^1.4.5-lts.1"
   }
 }

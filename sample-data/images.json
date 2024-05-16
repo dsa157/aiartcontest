@@ -1,0 +1,99 @@
+[
+    {
+      "title": "Chess 1",
+      "url": "/images/chess1.png",
+      "hashtags": ["#chess", "#surreal"],
+      "tools": ["Brush", "Paint"],
+      "user": "dsa157",
+      "createdAt": "2023-05-01T10:00:00Z"
+    },
+    {
+      "title": "Chess 2",
+      "url": "/images/chess2.png",
+      "hashtags": ["#chess", "#portrait", "blackandwhite"],
+      "tools": ["Pencil", "Sketch"],
+      "user": "grampapanda",
+      "createdAt": "2023-05-02T10:00:00Z"
+    },
+    {
+      "title": "Umbrella 1",
+      "url": "/images/umbrella1.png",
+      "hashtags": ["#umbrella", "#modern"],
+      "tools": ["Digital", "Photoshop"],
+      "user": "sammieloo",
+      "createdAt": "2023-05-03T10:00:00Z"
+    },
+    {
+      "title": "Umbrella 2",
+      "url": "/images/umbrella2.png",
+      "hashtags": ["#umbrella", "#urban"],
+      "tools": ["Ink", "Paper"],
+      "user": "user126",
+      "createdAt": "2023-05-04T10:00:00Z"
+    },
+    {
+      "title": "Umbrella 3",
+      "url": "/images/umbrella3.png",
+      "hashtags": ["#umbrella", "#sketch"],
+      "tools": ["Charcoal", "Paper"],
+      "user": "user127",
+      "createdAt": "2023-05-05T10:00:00Z"
+    },
+    {
+      "title": "Umbrella 4",
+      "url": "/images/umbrella4.png",
+      "hashtags": ["#umbrella", "#photography"],
+      "tools": ["Camera", "Lens"],
+      "user": "dsa157",
+      "createdAt": "2023-05-06T10:00:00Z"
+    },
+    {
+      "title": "Umbrella 5",
+      "url": "/images/umbrella5.png",
+      "hashtags": ["#umbrella", "#digital"],
+      "tools": ["Tablet", "Photoshop"],
+      "user": "grampapanda",
+      "createdAt": "2023-05-07T10:00:00Z"
+    },
+    {
+      "title": "Fool 1",
+      "url": "/images/fool1.png",
+      "hashtags": ["#fool", "#oilpainting"],
+      "tools": ["Oil", "Canvas"],
+      "user": "sammieloo",
+      "createdAt": "2023-05-08T10:00:00Z"
+    },
+    {
+      "title": "Fool 2",
+      "url": "/images/fool2.png",
+      "hashtags": ["#fool", "#dream"],
+      "tools": ["Watercolor", "Paper"],
+      "user": "user126",
+      "createdAt": "2023-05-09T10:00:00Z"
+    },
+    {
+      "title": "Fool 3",
+      "url": "/images/fool3.png",
+      "hashtags": ["#fool", "#digitalart"],
+      "tools": ["3D", "Blender"],
+      "user": "user127",
+      "createdAt": "2023-05-10T10:00:00Z"
+    },
+    {
+      "title": "Fool 4",
+      "url": "/images/fool4.png",
+      "hashtags": ["#fool", "#nature"],
+      "tools": ["Acrylic", "Canvas"],
+      "user": "dsa157",
+      "createdAt": "2023-05-11T10:00:00Z"
+    },
+    {
+      "title": "Dino 1",
+      "url": "/images/dino1.png",
+      "hashtags": ["#dinosaur", "#design"],
+      "tools": ["Vector", "Illustrator"],
+      "user": "grampapanda",
+      "createdAt": "2023-05-12T10:00:00Z"
+    }
+  ]
+  

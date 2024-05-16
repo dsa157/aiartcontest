@@ -10,24 +10,21 @@
     <div id="header"></div>
     <main>
         <section>
-            <div>
-                <img src="images/placeholder1.png" alt="User Avatar" class="profile-avatar">
-                <button>Edit Avatar</button>
-            </div>
-            <div>
+            <h2>Edit Profile</h2>
+            <form id="editProfileForm" action="/profile/edit" method="POST" enctype="multipart/form-data">
+                <div>
+                    <img src="images/placeholder1.png" alt="User Avatar" class="profile-avatar">
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                </div>
                 <label for="username">Username:</label>
-                <input type="text" id="username" value="User123">
-            </div>
-            <div>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
                 <label for="summary">Summary:</label>
-                <textarea id="summary">This is a short bio.</textarea>
-            </div>
-            <div>
+                <textarea id="summary" name="summary" placeholder="Tell us about yourself"></textarea>
                 <label for="social-media">Social Media:</label>
-                <input type="text" id="social-media" placeholder="e.g., Instagram: @user123">
-            </div>
-            <button>Save Profile</button>
-            <button onclick="location.href='profile-view.html'">Cancel</button>
+                <input type="text" id="social-media" name="social-media" placeholder="e.g., Instagram: @user123">
+                <button type="submit">Save Profile</button>
+                <button type="button" onclick="location.href='profile-view.html'">Cancel</button>
+            </form>
         </section>
     </main>
     <div id="footer"></div>

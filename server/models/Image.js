@@ -1,14 +1,15 @@
+// models/Image.js
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const ImageSchema = new Schema({
-    title: { type: String, required: true },
-    url: { type: String, required: true },
-    hashtags: { type: [String] },
-    tools: { type: String },
-    user: { type: Schema.Types.ObjectId, ref: 'User' },
-    createdAt: { type: Date, default: Date.now },
+const imageSchema = new mongoose.Schema({
+  title: String,
+  url: String,
+  hashtags: [String],
+  tools: [String],
+  user: String,
+  createdAt: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Image', ImageSchema);
+const Image = mongoose.model('Image', imageSchema);
 
+module.exports = Image;

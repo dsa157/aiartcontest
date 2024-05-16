@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 
 // Connect to MongoDB
-//mongoose.connect('mongodb://localhost:27017/art-contest', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost:27017/aiartcontest', { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

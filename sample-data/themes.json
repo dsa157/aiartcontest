@@ -1,0 +1,38 @@
+[
+    {
+      "theme": "Nature",
+      "description": "Create art inspired by the beauty of nature.",
+      "startDate": "2023-05-01T00:00:00Z",
+      "endDate": "2023-05-01T23:59:59Z",
+      "sponsor": "dsa157"
+    },
+    {
+      "theme": "Cityscapes",
+      "description": "Depict the hustle and bustle of urban life.",
+      "startDate": "2023-05-02T00:00:00Z",
+      "endDate": "2023-05-02T23:59:59Z",
+      "sponsor": "grampapanda"
+    },
+    {
+      "theme": "Abstract",
+      "description": "Explore abstract concepts and forms in your art.",
+      "startDate": "2023-05-03T00:00:00Z",
+      "endDate": "2023-05-03T23:59:59Z",
+      "sponsor": "sammieloo"
+    },
+    {
+      "theme": "Wildlife",
+      "description": "Showcase the beauty of wildlife through your art.",
+      "startDate": "2023-05-04T00:00:00Z",
+      "endDate": "2023-05-04T23:59:59Z",
+      "sponsor": "user126"
+    },
+    {
+      "theme": "Fantasy",
+      "description": "Create fantastical worlds and creatures.",
+      "startDate": "2023-05-05T00:00:00Z",
+      "endDate": "2023-05-05T23:59:59Z",
+      "sponsor": "user127"
+    }
+  ]
+  

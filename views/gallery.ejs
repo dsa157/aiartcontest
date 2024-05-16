@@ -1,0 +1,31 @@
+<!-- views/gallery.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <section>
+            <h2>Gallery</h2>
+            <input type="text" id="search" placeholder="Search by hashtag or username">
+            <div class="image-grid">
+                
+                <% images.forEach(function(image) { %>
+                    <div onclick="viewImage('<%= image.url %>', '<%= image.title %>', '<%= image.hashtags.join(' ') %>', '<%= image.tools.join(', ') %>', '<%= image.user %>', '/profile-view/<%= image.user %>')">
+                        <img src="<%= image.url %>" alt="<%= image.title %>">
+                    </div>
+                <% }); %>
+                
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="/js/loadPartials.js"></script>
+    <script src="/js/gallery.js"></script>
+</body>
+</html>

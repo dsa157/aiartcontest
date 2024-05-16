@@ -13,13 +13,13 @@
             <h2>Submit Your Artwork</h2>
             <form id="submissionForm" action="/submit" method="POST" enctype="multipart/form-data">
                 <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required>
+                <input type="text" id="title" name="title" placeholder="Enter the title of your artwork" required>
                 <label for="image">Upload Image:</label>
                 <input type="file" id="image" name="image" accept="image/*" required>
                 <label for="hashtags">Hashtags:</label>
-                <input type="text" id="hashtags" name="hashtags">
+                <input type="text" id="hashtags" name="hashtags" placeholder="e.g., #art #nature">
                 <label for="tools">Tools Used:</label>
-                <input type="text" id="tools" name="tools">
+                <input type="text" id="tools" name="tools" placeholder="e.g., Pencil, Paint">
                 <button type="submit">Submit</button>
             </form>
         </section>

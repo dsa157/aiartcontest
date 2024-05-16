@@ -1,0 +1,58 @@
+[
+    {
+      "username": "dsa157",
+      "email": "dsa157@gmail.com",
+      "password": "password123",
+      "avatar": "/images/dsa157.png",
+      "summary": "Artist passionate about nature.",
+      "socialMedia": {
+        "instagram": "@dsa157.art",
+        "twitter": "@dsa157"
+      }
+    },
+    {
+      "username": "grampapanda",
+      "email": "zachapril@gmail.com",
+      "password": "password124",
+      "avatar": "/images/grampapanda.png",
+      "summary": "Love to capture urban landscapes.",
+      "socialMedia": {
+        "instagram": "@user124",
+        "twitter": "@user124"
+      }
+    },
+    {
+      "username": "sammieloo",
+      "email": "sam.ryan.april@gmail.com",
+      "password": "password125",
+      "avatar": "/images/sammieloo.png",
+      "summary": "Digital artist and illustrator.",
+      "socialMedia": {
+        "instagram": "@user125",
+        "twitter": "@user125"
+      }
+    },
+    {
+      "username": "User126",
+      "email": "user126@example.com",
+      "password": "password126",
+      "avatar": "/images/avatar4.png",
+      "summary": "Sketching is my therapy.",
+      "socialMedia": {
+        "instagram": "@user126",
+        "twitter": "@user126"
+      }
+    },
+    {
+      "username": "User127",
+      "email": "user127@example.com",
+      "password": "password127",
+      "avatar": "/images/avatar5.png",
+      "summary": "Wildlife photographer.",
+      "socialMedia": {
+        "instagram": "@user127",
+        "twitter": "@user127"
+      }
+    }
+  ]
+  
