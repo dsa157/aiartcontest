@@ -1,8 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const multer = require('multer');
+const sharp = require('sharp');
 const Image = require('./models/Image');
 const User = require('./models/User'); // Assuming you have a User model
+const config = require('./config');
 
 const app = express();
 
@@ -17,7 +20,10 @@ app.set('view engine', 'ejs');
 // Serve static files from the public folder
 app.use(express.static(path.join(__dirname, '../public')));
 
-// Gallery route
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
+
+// Routes
 app.get('/gallery', async (req, res) => {
   try {
     const query = req.query.q || '';
@@ -34,7 +40,50 @@ app.get('/gallery', async (req, res) => {
   }
 });
 
-// Image display route
+app.get('/submit', (req, res) => {
+  res.render('submit', { config });
+});
+
+app.post('/submit', upload.single('image'), async (req, res) => {
+  try {
+    const { title, hashtags, tools } = req.body;
+    const file = req.file;
+    if (!file) {
+      return res.status(400).send('No file uploaded.');
+    }
+
+    let imgBuffer = file.buffer;
+    const img = sharp(imgBuffer);
+    const metadata = await img.metadata();
+
+    if (metadata.width > config.maxImageDimension || metadata.height > config.maxImageDimension) {
+      img.resize({ width: config.maxImageDimension, height: config.maxImageDimension, fit: sharp.fit.inside, withoutEnlargement: true });
+      imgBuffer = await img.toBuffer();
+    }
+
+    const outputFormat = 'jpg';
+    imgBuffer = await img.toFormat(outputFormat).toBuffer();
+
+    const filePath = path.join(__dirname, '../public/images', `${Date.now()}.${outputFormat}`);
+    await sharp(imgBuffer).toFile(filePath);
+
+    const image = new Image({
+      title,
+      url: `/images/${path.basename(filePath)}`,
+      hashtags: hashtags.split(' '),
+      tools: tools.split(', '),
+      user: 'dsa157', // Replace with the actual logged-in user
+      createdAt: new Date()
+    });
+
+    await image.save();
+
+    res.redirect('/gallery');
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
 app.get('/image/:id', async (req, res) => {
   try {
     const image = await Image.findById(req.params.id);
@@ -48,7 +97,6 @@ app.get('/image/:id', async (req, res) => {
   }
 });
 
-// Profile route
 app.get('/profile/:username', async (req, res) => {
   try {
     const username = req.params.username;
